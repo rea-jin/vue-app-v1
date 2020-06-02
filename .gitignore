@@ -19,3 +19,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+node_modules
+/src/App2.vue
+/src/views/Adform.vue
+/src/views/Adform2.vue
+/src/Appa.vue
+/src/store/index2.js
+/src/components/SideNavss.vue
