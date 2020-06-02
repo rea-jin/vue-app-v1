@@ -26,3 +26,5 @@ node_modules
 /src/Appa.vue
 /src/store/index2.js
 /src/components/SideNavss.vue
+.firebase/hosting.ZGlzdA.cache
+.firebaserc
