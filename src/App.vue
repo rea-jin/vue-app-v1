@@ -55,7 +55,9 @@
     </v-sheet>
 
     <SideNav/>
-
+<v-toolbar-items v-if="$store.state.login_user">
+      <v-btn text @click="logout">ログアウト</v-btn>
+    </v-toolbar-items>
     </v-app-bar>
 
 
@@ -93,26 +95,29 @@ export default {
         this.setLoginUser(user)
           this.selectDate()
         // this.fetchListsHd()
-          // this.fetchListsOp()
-        if (this.$router.currentRoute.name === 'home') {
-console.log('listhd')
-          this.$router.push({ name: 'list-hd' }, () => {})
-        }else if (this.$router.currentRoute.name === 'list-op') {
-        console.log('listop')
+           // this.fetchListsOp()
+         if (this.$router.currentRoute.name === 'home') {
+             console.log('listhd')
+           this.$router.push({ name: 'list-hd' }, () => {})
+         }else if (this.$router.currentRoute.name === 'list-op') {
+          console.log('listop')
          }else if (this.$router.currentRoute.name === 'note') {
-console.log('note')
-        } else { // ログアウトして入れば、userを削除
+            console.log('note')
+         }else{
+            console.log('none')
+         }
+      } else { // ログアウトして入れば、userを削除
         this.deleteLoginUser()
         this.$router.push({ name: 'home' }, () => {})
       }
     }
-        }    )
+  )
   },
   data: () => ({
     //
   }),
   methods: {
-    ...mapActions(['toggleSideMenu', 'setLoginUser', 'logout', 'deleteLoginUser', 'fetchListsHd', 'fetchListsOp','selectDate'])
+    ...mapActions(['logout', 'toggleSideMenu', 'setLoginUser', 'deleteLoginUser', 'fetchListsHd', 'fetchListsOp','selectDate'])
   }
 };
 </script>

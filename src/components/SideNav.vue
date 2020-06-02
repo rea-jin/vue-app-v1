@@ -37,11 +37,11 @@
         <!-- <v-btn color='info' @click="login">ログイン</v-btn> -->
        <!-- </v-flex> -->
 
-      <v-list-item v-if="$store.state.login_user">
+      <v-list-item v-if="$store.state.login_user" >
         <v-list-item-icon>
           <v-icon>mdi-home</v-icon>
           </v-list-item-icon>
-        <v-list-item-content @click="logout">
+        <v-list-item-content  text @click="logout">
           <v-list-item-title>ログアウト</v-list-item-title>
           </v-list-item-content>
       </v-list-item>

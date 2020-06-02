@@ -9,6 +9,9 @@
         <!-- loginメソッドを呼ぶ -->
         <div v-if="$store.state.login_user">サイドメニューよりログアウトしてください</div>
         <v-btn v-if="$store.state.login_user">ログイン中です</v-btn>
+         <v-flex v-if="$store.state.login_user">
+      <v-btn text @click="logout">ログアウト</v-btn>
+    </v-flex>
         <v-btn v-if="$store.state.login_user==null" @click="login">Googleアカウントでログイン</v-btn>
       </v-flex>
           <hr>
@@ -43,14 +46,8 @@ import { mapActions } from 'vuex'
 // importでローカルのコンポーネントファイルを読み込む必要がある
 export default {
   methods: {
-    ...mapActions(['login'])
-  },
-  // name: 'home',
-  // components: 
-  // {
-    // HelloWorld,
-    // Home
-  // }
+    ...mapActions(['login', 'logout'])
+  }
 }
 </script>
 

@@ -161,7 +161,5 @@ export default new Vuex.Store({
     // getterは参照した時点でゲッターメソッドの関数が帰って来る
     // 内側の関数id=>が帰って来る storeからidを受けて、それとマッチするidを返す
     getListsById: state => id => state.lists.find(list => list.id === id)
-  },
-  modules: {
   }
 })

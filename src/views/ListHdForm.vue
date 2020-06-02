@@ -44,10 +44,10 @@ import { mapActions } from 'vuex'
 // import {BootstrapDateInput} from 'vue'
 // import Date from './../components/Date'
 export default {
-  components:{
+  // components:{
     // BootstrapDateInput
     // Date
-  },
+  // },
     // 連絡先を取得できたときは表示する、できないときは一覧を表示する
     created () { // ルートのパラメータにidが含まれているか $route.paramsから取得できる
     // list_idがない場合は、新規の追加とみなす
